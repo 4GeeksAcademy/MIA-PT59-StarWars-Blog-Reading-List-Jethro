@@ -1,0 +1,22 @@
+.text-center{
+    display : flex;
+    padding-right: 5%;
+}
+
+h1{
+    color : red;
+    font-size: xx-large;
+    font-family: Lucida Sans;
+    font-style: italic;
+    margin-left: 5%;
+}
+
+.text-planet{
+    display : flex;
+    padding-right: 5%;
+ 
+}
+.head-planet{
+    margin-top: 5%;
+}
+
