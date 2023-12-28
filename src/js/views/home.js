@@ -2,7 +2,7 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Characters } from "../component/characters";
-import { Planet } from "./planet";
+import { Planets } from "../component/planet";
 
 export const Home = () => (
 	<><div className="head-characters">
@@ -19,11 +19,7 @@ export const Home = () => (
 	</div>
 	<div className="text-planet mt-5">
 
-			<Planet />
-			<Planet />
-			<Planet />
-			<Planet />
-			<Planet />
+			<Planets />
 		</div></>
 	
 		
