@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useContext, useEffect, useState} from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
+
 export const Navbar = () => {
+	const {store,actions}= useContext(Context)
+	const [favorites,setFavorites]= useState([])
+	useEffect(()=>{
+		setFavorites(store.favorites)
+	},[])
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
@@ -9,14 +16,17 @@ export const Navbar = () => {
 			</Link>
 		<div className="ml-auto">
 			<div className="listElement">
-				<div class="btn-group">
-  					<button type="button" class="btn btn-primary">Favorites</button>
-  					<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
-    					<span class="caret"></span>
+				<div className="btn-group">
+  					<button type="button" className="btn btn-primary">Favorites</button>
+  					<button type="button" className="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    					<span className="caret"></span>
   					</button>
-  					<div class="dropdown-menu">
-    					<a class="dropdown-item" href="#">...</a>
-    					<a class="dropdown-item" href="#">....</a>
+
+  					<div className="dropdown-menu">
+						{favorites?.map((item,index)=>(
+							<span className="dropdown-item" key={index}> {item}</span>
+						))}
+    					    					
   					</div>
 				</div>
 

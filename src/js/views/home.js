@@ -1,7 +1,7 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Characters } from "./characters";
+import { Characters } from "../component/characters";
 import { Planet } from "./planet";
 
 export const Home = () => (
@@ -11,10 +11,7 @@ export const Home = () => (
 	<div className="text-center mt-5">
 
 			<Characters />
-			<Characters />
-			<Characters />
-			<Characters />
-			<Characters />
+			
 		</div>
 		
 		<div className="head-planet">
