@@ -48,7 +48,7 @@ export const Characters = (props) => {
             </Link>
             <button
               onClick={(e) => handleClick(e,character.name)}
-              className={liked ? "fas fa-heart" : "far fa-heart"}
+              className="far fa-heart"
               style={{
                 background: "transparent",
                 border: "none",

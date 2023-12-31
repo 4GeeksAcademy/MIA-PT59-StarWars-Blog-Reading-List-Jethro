@@ -3,18 +3,18 @@ import { Context } from "../store/appContext";
 import { Link, useActionData } from "react-router-dom";
 import "../../styles/planet.css";
 
-export const Planets = (props) => {
-  const [planets, setPlanets] = useState([]);
+export const Starships = (props) => {
+  const [starships, setStarships] = useState([]);
   const {store,actions} = useContext(Context) 
   const [liked, setLiked] = useState(false)
 
   useEffect(() => {
-     async function getPlanets() {
-    let response = await fetch("https://swapi.dev/api/planets");
+     async function getStarships() {
+    let response = await fetch("https://swapi.dev/api/starships/");
     let data = await response.json();
-    setPlanets(data.results);
+    setStarships(data.results);
   }
-    getPlanets();
+    getStarships();
   }, []);
 
     const handleClick = (e,item)=>{
@@ -33,7 +33,7 @@ export const Planets = (props) => {
 
   return (
     <div className="container d-flex overflow-auto col-10">
-      {planets?.map((planet,index) => (
+      {starships?.map((starship,index) => (
         <div className="card" key={index} style={{ minWidth: "200px" }}>
           <img
             className="card-img-top"
@@ -42,12 +42,12 @@ export const Planets = (props) => {
             width = "300px"
           />
           <div className="card-body">
-            <h5 className="card-title">{planet.name}</h5>
-            <Link to={"/planetDescription/"+parseInt(index)+1} className="btn btn-primary">
+            <h5 className="card-title">{starship.name}</h5>
+            <Link to={"/starshipDescription/"+parseInt(index)+1} className="btn btn-primary">
               Learn more !
             </Link>
             <button
-              onClick={(e) => handleClick(e,planet.name)}
+              onClick={(e) => handleClick(e,starship.name)}
               className="far fa-heart"
               style={{
                 background: "transparent",

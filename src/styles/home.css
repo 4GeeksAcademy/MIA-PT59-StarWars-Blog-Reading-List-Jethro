@@ -19,4 +19,22 @@ h1{
 .head-planet{
     margin-top: 5%;
 }
+.footer{
+    border-top: 100%;
+    border-bottom: 100%;
+    border-style:solid;
+    border-color: rgb(134, 127, 235);
+    border-width: 100%;
+    border-left: none;
+    border-right: none;
+    
+}
+
+.container{
+    display: block;
+}
+
+body{
+    background-color:rgb(4, 11, 91);
+}
 

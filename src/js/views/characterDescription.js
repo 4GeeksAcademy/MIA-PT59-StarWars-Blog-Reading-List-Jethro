@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
+import "../../styles/characterDescription.css";
 
 import { Context } from "../store/appContext";
 

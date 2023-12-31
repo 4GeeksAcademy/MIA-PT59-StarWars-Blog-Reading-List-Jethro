@@ -20,16 +20,16 @@ export const Navbar = () => {
       <div className="ml-auto">
         <div className="listElement">
           <div className="btn-group">
-            <div class="dropdown">
+            <div className="dropdown">
               <button
-                class="btn btn-primary dropdown-toggle"
-                type="button"
+                className="btn btn-primary dropdown-toggle"
+                type="button" 
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Favorites
               </button>
-              <ul class="dropdown-menu">
+              <ul className="dropdown-menu">
                 {favorites?.map((item,index)=>(
                     <li className="dropdown-item" key={index}>{item}</li>
                 ))}
